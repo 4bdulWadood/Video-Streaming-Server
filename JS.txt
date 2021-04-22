@@ -1,0 +1,68 @@
+//JS tips tricks and quirks
+
+const someObject = {
+	prop1: "hello",
+  prop2: 5,
+  prop3: 4.55
+}
+
+someObj(someObject); 
+
+function someObj({prop1, prop2, prop3}){
+console.log(prop1, prop2, prop3)
+}
+
+const age = 200;
+
+age > 60  ? 
+				age > 100 ? console.log("you are older than 100") : 
+        console.log("you are between 60 and 100") : 
+        console.log("you are less than 60")
+        
+//Swapping two values (the easy way!)
+var o = 5;
+var b = 4;
+
+[o, b] = [b, o]
+
+console.log(o, b)
+
+//Populate an array with repetetive data easily
+const users = Array(10).fill("100")
+console.log(users)
+
+//Easily remove repeating values from array
+var u = ["Ed", 
+				       "traversy",
+               "the unemployed tech lead",
+               "Anna",
+               "John Dough", 
+               "John Dough",
+               "Anna"]
+               
+let newSet = new Set(u) // set with removed repeating values
+const unique = Array.from(newSet) 
+
+console.log(unique) //array with removed repeating values
+
+
+//turn object keys or values into arrays:
+const us = {
+	name: "Syed", 
+  occupation: "model",
+  hobbies: "Licking Floors"
+}
+
+const keys = Object.keys(us)
+const values = Object.values(us)
+
+console.log(keys, values)
+
+//Check code performance
+let startAt = performance.now()
+
+for(let p = 0; p<10000000; p++){}
+
+let endAt = performance.now()
+
+console.log(`took ${endAt-startAt} milliseconds to execute. `)
