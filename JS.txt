@@ -66,3 +66,9 @@ for(let p = 0; p<10000000; p++){}
 let endAt = performance.now()
 
 console.log(`took ${endAt-startAt} milliseconds to execute. `)
+
+/*
+.find(c=>{
+ //to find an object from an object array based on its property. 
+})
+*/
